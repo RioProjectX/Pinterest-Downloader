@@ -9,7 +9,7 @@
         "video",
         "image"
     ],
-    "repository": "https://gitlab.com/muhammedfurkan/UniBorg",
+    "repository": "https://github.com/RioProjectX/Pinterest-Downloader",
     "website": "https://telegram.dog/fckualot",
     "success_url": "https://t.me/fckualot",
     "env": {
