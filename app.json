@@ -10,8 +10,8 @@
         "image"
     ],
     "repository": "https://gitlab.com/muhammedfurkan/UniBorg",
-    "website": "https://telegram.dog/KanalLinkleri",
-    "success_url": "https://t.me/KanalLinkleri",
+    "website": "https://telegram.dog/fckualot",
+    "success_url": "https://t.me/fckualot",
     "env": {
         "ENV": {
             "description": "Setting this to ANYTHING will enable environment variables.",
