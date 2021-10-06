@@ -33,8 +33,7 @@ bot = TelegramClient('pinterestbot', APP_ID, APP_HASH).start(
     bot_token=BOT_TOKEN)
 
 msg = """
-Merhaba ben Pinterest üzerinden Video ve Resim indirebilen bir botum.
-`Hello, I am a bot that can download Videos and Images via Pinterest.`
+`Halo, Saya Adalah bot pinterest, saya bisa mendownload video atau gambar via Pinterest.`
 
 Şunları yapabilirim:
 `Saya Bisa:`
@@ -123,7 +122,7 @@ async def say(event):
 
     def KULLANICILAR(): return db.kullanici_idleri
 
-    await event.client.send_message("By_Azade", f"ℹ️ `{len(KULLANICILAR())}` __Adet Kullanıcıya Sahipsin..__")
+    await event.client.send_message("By_Rio", f"ℹ️ `{len(KULLANICILAR())}` __Adet Kullanıcıya Sahipsin..__")
 
 
 # Command to make an announcement to users using the bot
@@ -146,7 +145,7 @@ async def duyuru(event):
         return
 
     if not event.message.reply_to:
-        await ilk_mesaj.edit("⚠️ __Duyurmak için mesaj yanıtlayın..__")
+        await ilk_mesaj.edit("⚠️ __Note..__")
         return
 
     basarili = 0
@@ -189,13 +188,13 @@ async def start(event):
             [
                 [
                     Button.url(
-                        text='📍 Kanal Linki', url="t.me/KanalLinkleri"),
+                        text='📍 Channel', url="t.me/rioprojects"),
                     Button.url(
-                        text='👤 Yapımcı', url="t.me/By_Azade")
+                        text='👤 Developer', url="t.me/fckualot")
                 ],
                 [
-                    Button.url(text="🔗 GitHub Repo",
-                               url="https://github.com/muhammedfurkan/pinterest_downloader_telegram")
+                    Button.url(text="🔗 Group Support",
+                               url="https://t.me/riogroupsupport")
                 ]
             ]
         )
@@ -217,9 +216,9 @@ async def vid(event):
             mesaj
         )
         markup = bot.build_reply_markup([Button.url(
-            text='📍 Kanal Linki', url="t.me/KanalLinkleri"),
+            text='📍 Channel', url="t.me/rioprojects"),
             Button.url(
-            text='👤 Yapımcı', url="t.me/By_Azade")
+            text='👤 Developer', url="t.me/fckualot")
         ])
         url = event.pattern_match.group(1)
         if url:
@@ -297,9 +296,9 @@ async def img(event):
         mesaj
     )
     markup = bot.build_reply_markup([Button.url(
-        text='📍 Kanal Linki', url="t.me/KanalLinkleri"),
+        text='📍 Channel', url="t.me/rioprojects"),
         Button.url(
-        text='👤 Yapımcı', url="t.me/By_Azade")
+        text='👤 Rio', url="t.me/fckualot")
     ])
     url = event.pattern_match.group(1)
     if url:
@@ -313,7 +312,7 @@ async def img(event):
         await event.client.send_file(
             event.chat_id,
             j,
-            caption="**@Pinterestdown_Robot** tarafından indirilmiştir\n\nDownloaded by **@Pinterestdown_Robot**",
+            caption="**@pinterestriobot** tarafından indirilmiştir\n\nDownloaded by **@pinterestriobot**",
             force_document=False,
             allow_cache=False,
             reply_to=event.message.id,
