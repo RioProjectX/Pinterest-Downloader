@@ -37,14 +37,11 @@ Merhaba ben Pinterest üzerinden Video ve Resim indirebilen bir botum.
 `Hello, I am a bot that can download Videos and Images via Pinterest.`
 
 Şunları yapabilirim:
-`I can:`
-
-👉 **Video indirmek için:** `/pvid pinterestURL`
-👉 **To download a video:** `/pvid pinterestURL`
+`Saya Bisa:`
+👉 **Untuk Men Download a video:** `/pvid pinterestURL`
 
 
-👉 **Resim indirebilmek için:** `/pimg pinterestURL`
-👉 **To download a image:** `/pimg pinterestURL`
+👉 **Untuk Men Download Gambar:** `/pimg pinterestURL`
 """
 
 
@@ -145,7 +142,7 @@ async def duyuru(event):
     def KULLANICILAR(): return db.kullanici_idleri
 
     if not KULLANICILAR():
-        await ilk_mesaj.edit("ℹ️ __Start vermiş kimse yok kanka..__")
+        await ilk_mesaj.edit("ℹ️ __Start Time..__")
         return
 
     if not event.message.reply_to:
